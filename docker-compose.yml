@@ -69,9 +69,12 @@ services:
       - /var/lib/docker/:/var/lib/docker:ro
     ports:
       - 8080:8080
-    restart: always
     deploy:
       mode: global
+    privileged: True
+    devices: 
+      - "/dev/kmsg:/dev/kmsg"
+    restart: unless-stopped    
 
   grafana:
     image: grafana/grafana
