@@ -83,7 +83,7 @@ services:
       - grafana_data:/var/lib/grafana
       - ./grafana/dashboards:/var/lib/grafana/dashboards
       - ./grafana/provisioning:/etc/grafana/provisioning
-    env_file:
+    environment:
       - GF_SECURITY_ADMIN_PASSWORD=P4ssW0rd0!
 
   blackbox_exporter:
