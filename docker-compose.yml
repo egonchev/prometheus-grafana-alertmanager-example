@@ -89,12 +89,12 @@ services:
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=P4ssW0rd0!
 
-  blackbox_exporter:
-    image: prom/blackbox-exporter:latest
-    ports:
-      - 9115:9115
-    volumes:
-      - ./blackboxexporter/:/etc/blackboxexporter/
-    command:
-      - '--config.file=/etc/blackboxexporter/config.yml'
-    restart: always
+#  blackbox_exporter:
+#    image: prom/blackbox-exporter:latest
+#    ports:
+#      - 9115:9115
+#    volumes:
+#      - ./blackboxexporter/:/etc/blackboxexporter/
+#    command:
+#      - '--config.file=/etc/blackboxexporter/config.yml'
+#    restart: always
